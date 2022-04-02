@@ -3,6 +3,7 @@
 ## 安装依赖
 ```
 npm install echarts --S
+npm install less less-loader --S
 npm install echarts-mini-vue
 ```
 ## 使用 配合echarts使用
