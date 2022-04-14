@@ -63,13 +63,28 @@ stjcData: [
     value: 130,
   },
 ]
-```
+### 折线图示例
+<charts-radar style="height: 245px" class="mt10" :datas="QZXQ_RADAR" :indicator="QZXQ_indicator"></charts-radar>
+QZXQ_RADAR: [
+  { category: '需求', value: [200, 300, 200, 400, 500] },
+],
+QZXQ_indicator: [
+  { name: '营商环境', max: 500 },
+  { name: '生态监测', max: 500 },
+  { name: '要素保障', max: 500 },
+  { name: '基础设施', max: 500 },
+  { name: '企业风险', max: 500 },
+],
 
-```
 
-### Compiles and minifies for production
+### 场景发布到npm
+npm账号：sunyuese
+密码：love201314+
+邮箱：957685825@qq.com
 ```
-npm run build
+npm run lib
+npm login
+npm publish
 ```
 
 ### Lints and fixes files
