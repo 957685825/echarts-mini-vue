@@ -36,6 +36,7 @@
       }"
       top="20%"
     ></chart-line-area>
+    <charts-radar style="height: 245px" class="mt10" :datas="QZXQ_RADAR" :indicator="QZXQ_indicator"></charts-radar>
   </div>
 </template>
 
@@ -49,6 +50,16 @@ export default {
   },
   data() {
     return {
+      QZXQ_RADAR: [
+        { category: '需求', value: [200, 300, 200, 400, 500] },
+      ],
+      QZXQ_indicator: [
+        { name: '营商环境', max: 500 },
+        { name: '生态监测', max: 500 },
+        { name: '要素保障', max: 500 },
+        { name: '基础设施', max: 500 },
+        { name: '企业风险', max: 500 },
+      ],
       stjcData: [
         {
           name: "00:00",

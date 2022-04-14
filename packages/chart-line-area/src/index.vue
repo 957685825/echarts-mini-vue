@@ -47,56 +47,6 @@ export default {
             value: 130,
             item: 130,
           },
-          {
-            name: "04:00",
-            value: 120,
-            item: 140,
-          },
-          {
-            name: "06:00",
-            value: 100,
-            item: 150,
-          },
-          {
-            name: "08:00",
-            value: 80,
-            item: 110,
-          },
-          {
-            name: "10:00",
-            value: 80,
-            item: 160,
-          },
-          {
-            name: "12:00",
-            value: 70,
-            item: 191,
-          },
-          {
-            name: "14:00",
-            value: 90,
-            item: 182,
-          },
-          {
-            name: "16:00",
-            value: 100,
-            item: 170,
-          },
-          {
-            name: "18:00",
-            value: 130,
-            item: 160,
-          },
-          {
-            name: "20:00",
-            value: 120,
-            item: 150,
-          },
-          {
-            name: "22:00",
-            value: 110,
-            item: 140,
-          },
         ];
       },
     },
@@ -222,9 +172,19 @@ export default {
       // 基于准备好的dom，初始化echarts实例
       this.chartInst = this.$echarts.init(this.$refs.myChart);
       this.chartInst.setOption({
-        color: this.barColor[(0, 1)],
+        color: this.barColor[0],
         tooltip: {
           trigger: "axis",
+          backgroundColor: 'rgba(50,50,50,0.7)',
+          extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);',
+          borderColor: '#333',
+          textStyle: { // 提示框浮层的文本样式。
+            color: '#fff',
+            fontStyle: 'normal',
+            fontWeight: 'normal',
+            fontFamily: 'sans-serif',
+            fontSize: 14,
+          },
           axisPointer: {
             type: "cross",
             label: {
@@ -304,7 +264,6 @@ export default {
             data: this.Ydata,
             // symbolSize: this.symbolSize,
             symbolSize: 5,
-
             areaStyle: {
               normal: {
                 lineStyle: {
@@ -331,9 +290,9 @@ export default {
           {
             type: "line",
             barWidth: this.barWidth,
-            data: this.valTwo,
+            data: [],
             // symbolSize: this.symbolSize,
-            symbolSize: 5,
+            symbolSize: 4,
             areaStyle: {
               normal: {
                 lineStyle: {
@@ -419,7 +378,6 @@ export default {
 .chartBox {
   position: relative;
   pointer-events: none;
-  background: #000;
   .legth {
     position: absolute;
     left: 321px;
