@@ -63,7 +63,7 @@ stjcData: [
     value: 130,
   },
 ]
-### 折线图示例
+### 雷达图示例
 <charts-radar style="height: 245px" class="mt10" :datas="QZXQ_RADAR" :indicator="QZXQ_indicator"></charts-radar>
 QZXQ_RADAR: [
   { category: '需求', value: [200, 300, 200, 400, 500] },
