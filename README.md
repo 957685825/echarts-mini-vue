@@ -8,9 +8,11 @@ npm install echarts-mini-vue
 ```
 ## 使用 配合echarts使用
 import * as echarts from 'echarts'; 注意: 要先引入echarts
+```
 Vue.prototype.$echarts = echarts;
-
+```
 import sysTestDome from 'echarts-mini-vue'
+```
 Vue.use(sysTestDome);
 ```
 ### 折线图示例
