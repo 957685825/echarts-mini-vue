@@ -14,7 +14,7 @@ Vue.prototype.$echarts = echarts;
 import sysTestDome from 'echarts-mini-vue'
 ```
 Vue.use(sysTestDome);
-```
+
 ### 折线图示例
 <chart-line-area
   :rowData="stjcData"
